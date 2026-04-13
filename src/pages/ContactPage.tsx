@@ -71,12 +71,22 @@ export default function ContactPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-dark-900 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-400">New York, NY</p>
-                  <p className="text-xs text-gray-500">40.7128° N, 74.0060° W</p>
+                  <p className="text-sm text-gray-400">NexaCore - Warsaw, Poland</p>
+                  <p className="text-xs text-black font-mono">52.2297° N, 21.0122° E</p>
                 </div>
               </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.099947!2d21.00778!3d52.22877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c0c1e!2zTmV4YUNvcmUgU3RhcmkgU2NlbmEgLSBXYXJzYXcsIFBvbGFuZA!5e0!3m2!1sen!2sus!4v172!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{border:0}}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Nexacore Warsaw Office Location"
+              />
               {/* Grid overlay */}
-              <div className="absolute inset-0 bg-grid opacity-20" />
+              <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none z-10" />
             </div>
           </motion.div>
 
