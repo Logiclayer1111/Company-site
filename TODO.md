@@ -1,10 +1,9 @@
-# Task: Exchange teamMembers images ✅ COMPLETE
+# Fix Navbar Navigation Issue
 
-## Steps completed:
-- [x] Step 1: Moved images to public/assests/images/
-- [x] Step 2: Updated src/data/index.ts teamMembers with local paths
-- [x] Step 3: Tested via dev server
-- [x] Step 4: Old src/assests/images/ ready for cleanup
-- [x] Step 5: Marked complete
-
-Local images now used in AboutPage/HomePage team sections. Dev server running at http://localhost:5173.
+## Steps:
+1. [x] Create src/components/ui/ErrorBoundary.tsx to catch page render errors
+2. [x] Edit src/App.tsx to wrap Routes with ErrorBoundary
+3. [x] Test navigation by running `npm run dev`
+4. [x] Verify all pages load without blank UI
+5. [ ] Update dependencies if console errors show missing packages
+6. [ ] Mark complete

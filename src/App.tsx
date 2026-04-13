@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import ChatBot from './components/ui/ChatBot'
 import ScrollToTop from './components/ui/ScrollToTop'
+import ErrorBoundary from './components/ui/ErrorBoundary'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ServicesPage from './pages/ServicesPage'
@@ -27,19 +28,21 @@ export default function App() {
       <ScrollToTop />
       <div className="min-h-screen bg-dark-900 text-gray-100 font-sans">
         <Navbar />
-        <PageTransition>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/request" element={<ProjectRequestPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-          </Routes>
-        </PageTransition>
+        <ErrorBoundary>
+          <PageTransition>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/request" element={<ProjectRequestPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+            </Routes>
+          </PageTransition>
+        </ErrorBoundary>
         <Footer />
         <ChatBot />
       </div>
