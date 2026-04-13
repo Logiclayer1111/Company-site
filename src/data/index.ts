@@ -350,7 +350,7 @@ export const openPositions = [
 ]
 
 export const companyTimeline = [
-  { year: '2018', title: 'Founded', description: 'NexaCore was founded by Alex Chen and Sarah Mitchell with a vision to democratize enterprise-grade technology.' },
+  { year: '2018', title: 'Founded', description: 'NexaCore was founded by James Markov and Antoni Nowicki with a vision to democratize enterprise-grade technology.' },
   { year: '2019', title: 'First Enterprise Client', description: 'Landed our first Fortune 500 client and grew the team to 15 engineers.' },
   { year: '2020', title: 'AI Division Launch', description: 'Launched our dedicated AI/ML practice, delivering our first production ML systems.' },
   { year: '2021', title: 'Series A — $8M', description: 'Raised $8M to expand globally. Opened offices in London and Singapore.' },
