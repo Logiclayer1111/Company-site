@@ -56,7 +56,7 @@ export default function Navbar() {
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold gradient-text">NexaCore</span>
+            <span className="text-xl font-bold gradient-text">LogicPulse</span>
           </Link>
 
           {/* Desktop Nav */}

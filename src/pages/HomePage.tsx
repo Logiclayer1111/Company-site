@@ -159,7 +159,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
             >
-              NexaCore is a full-service technology partner for startups and enterprises.
+              LogicPulse is a full-service technology partner for startups and enterprises.
               From concept to production — we deliver software that drives real business outcomes.
             </motion.p>
 

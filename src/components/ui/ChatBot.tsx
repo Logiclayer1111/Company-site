@@ -5,7 +5,7 @@ import { MessageCircle, X, Send, Bot, User, Sparkles } from 'lucide-react'
 type Message = { role: 'bot' | 'user'; text: string }
 
 const botResponses: Record<string, string> = {
-  default: "I'm NexaCore's AI assistant. I can help you explore our services, discuss your project, or connect you with our team. What are you looking to build?",
+  default: "I'm LogicPulse's AI assistant. I can help you explore our services, discuss your project, or connect you with our team. What are you looking to build?",
   hello: "Hey there! 👋 I'm here to help you find the right solution. Are you looking to build a web app, mobile app, AI system, or something else?",
   services: "We offer Web Development, Mobile Apps, AI/ML, Cloud & DevOps, Cybersecurity, UI/UX Design, Blockchain, and Data Engineering. Which area interests you most?",
   web: "Our web team builds with React, Next.js, Vue, and Node.js. We've delivered everything from MVPs to enterprise platforms. Want to see some examples?",
@@ -14,7 +14,7 @@ const botResponses: Record<string, string> = {
   cloud: "We architect cloud infrastructure on AWS, GCP, and Azure with Kubernetes, CI/CD, and IaC. Are you migrating, scaling, or starting fresh?",
   price: "Project costs vary based on scope and complexity. Most projects range from $25K to $500K+. The best way to get an accurate estimate is to submit a project brief — it takes 2 minutes!",
   timeline: "Timelines depend on scope. MVPs typically take 6-12 weeks, while enterprise projects can run 3-12 months. We always provide a detailed timeline upfront.",
-  contact: "You can reach us at hello@nexacore.io or call +1 (212) 555-0100. Or fill out our contact form and we'll respond within 24 hours.",
+  contact: "You can reach us at hello@LogicPulse.io or call +1 (212) 555-0100. Or fill out our contact form and we'll respond within 24 hours.",
   start: "Ready to kick things off? Head to our Project Request page and fill out a brief. Our team will review it and get back to you within 24 hours with a proposal.",
 }
 
@@ -101,7 +101,7 @@ export default function ChatBot() {
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-white">NexaCore AI</p>
+                <p className="text-sm font-semibold text-white">LogicPulse AI</p>
                 <p className="text-xs text-blue-100">Always online · Instant replies</p>
               </div>
               <div className="ml-auto w-2 h-2 rounded-full bg-green-400 animate-pulse" />
