@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Clock, CheckCircle2, ArrowRight, Send } from 'luci
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'hello@nexacore.io', href: 'mailto:hello@nexacore.io' },
   { icon: Phone, label: 'Phone', value: '+1 (212) 555-0100', href: 'tel:+12125550100' },
-  { icon: MapPin, label: 'Offices', value: 'New York · London · Singapore', href: '#' },
+  { icon: MapPin, label: 'Offices', value: 'Warsaw · London · Singapore', href: '#' },
   { icon: Clock, label: 'Response Time', value: 'Within 24 hours', href: '#' },
 ]
 

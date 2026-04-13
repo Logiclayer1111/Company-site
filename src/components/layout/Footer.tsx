@@ -105,7 +105,7 @@ export default function Footer() {
               <Phone className="w-4 h-4" /> +1 (212) 555-0100
             </a>
             <span className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" /> New York · London · Singapore
+              <MapPin className="w-4 h-4" /> Warsaw · London · Singapore
             </span>
           </div>
           <p className="text-sm text-gray-500">
