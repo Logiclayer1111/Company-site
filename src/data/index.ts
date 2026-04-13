@@ -190,23 +190,23 @@ export const teamMembers = [
 
 export const testimonials = [
   {
-    name: 'David Park',
-    role: 'CTO, FinFlow Inc.',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
-    text: 'NexaCore transformed our vision into a world-class banking app. Their AI expertise and attention to detail is unmatched. We went from concept to 500K users in 8 months.',
-    rating: 5,
-  },
-  {
-    name: 'Jennifer Walsh',
+    name: 'James Markov',
     role: 'CEO, MediSync Health',
-    avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80',
+    avatar: '/assests/images/James Markov.png',
     text: 'The team delivered a HIPAA-compliant telemedicine platform that exceeded every expectation. Their technical depth and project management are exceptional.',
     rating: 5,
   },
   {
-    name: 'Robert Kim',
-    role: 'VP Engineering, LogiCorp',
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80',
+    name: 'Viktor Marjewskie',
+    role: 'CTO, FinFlow Inc.',
+    avatar: '/assests/images/Viktor Majewski.png',
+    text: 'NexaCore transformed our vision into a world-class banking app. Their AI expertise and attention to detail is unmatched. We went from concept to 500K users in 8 months.',
+    rating: 5,
+  },
+  {
+    name: 'Antoni Nowicki',
+    role: 'Head of Engineering',
+    avatar: '/assests/images/Antoni Nowicki.png',
     text: 'NexaCore\'s ML solution saved us $2M in the first year. The ROI was clear within 3 months. I\'d recommend them to any enterprise looking to leverage AI.',
     rating: 5,
   },
