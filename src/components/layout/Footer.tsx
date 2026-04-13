@@ -24,7 +24,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-dark-800 border-t border-white/5 overflow-hidden">
+    <footer className="relative bg-gray-50 dark:bg-dark-800 border-t border-gray-200 dark:border-white/5 overflow-hidden">
       {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -38,18 +38,18 @@ export default function Footer() {
               </div>
               <span className="text-xl font-bold gradient-text">NexaCore</span>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
               Building future-ready digital products for startups and enterprises. From idea to scale — we make it happen.
             </p>
 
             {/* Newsletter */}
             <div className="mb-6">
-              <p className="text-sm font-medium text-gray-300 mb-2">Stay in the loop</p>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Stay in the loop</p>
               <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="flex-1 text-sm py-2.5 px-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50"
+                  className="flex-1 text-sm py-2.5 px-3 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500/50"
                 />
                 <button className="p-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 transition-colors">
                   <ArrowRight className="w-4 h-4 text-white" />
@@ -67,7 +67,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href={href}
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-500/20 hover:border-blue-500/30 transition-all"
+                  className="w-9 h-9 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-white hover:bg-blue-500/20 hover:border-blue-500/30 transition-all"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -78,13 +78,13 @@ export default function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-sm font-semibold text-white mb-4">{category}</h4>
+              <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">{category}</h4>
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
                     <Link
                       to={link.path}
-                      className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -96,19 +96,19 @@ export default function Footer() {
         </div>
 
         {/* Contact info */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-wrap gap-6 text-sm text-gray-400">
-            <a href="mailto:hello@nexacore.io" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-wrap gap-6 text-sm text-gray-500 dark:text-gray-400">
+            <a href="mailto:hello@nexacore.io" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               <Mail className="w-4 h-4" /> hello@nexacore.io
             </a>
-            <a href="tel:+12125550100" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
+            <a href="tel:+12125550100" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               <Phone className="w-4 h-4" /> +1 (212) 555-0100
             </a>
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" /> Warsaw · London · Singapore
             </span>
           </div>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400 dark:text-gray-500">
             © {new Date().getFullYear()} NexaCore. All rights reserved.
           </p>
         </div>

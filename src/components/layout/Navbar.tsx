@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Zap, ChevronDown } from 'lucide-react'
+import { Menu, X, Zap, ChevronDown, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../../context/ThemeContext'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -24,6 +25,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [dropdown, setDropdown] = useState<string | null>(null)
   const location = useLocation()
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -42,7 +44,9 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-dark shadow-lg shadow-black/20' : 'bg-transparent'
+        scrolled
+          ? 'glass-dark shadow-lg shadow-black/10 dark:shadow-black/20'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +69,7 @@ export default function Navbar() {
                   onMouseEnter={() => setDropdown(link.label)}
                   onMouseLeave={() => setDropdown(null)}
                 >
-                  <button className="flex items-center gap-1 px-4 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">
+                  <button className="flex items-center gap-1 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-all text-sm font-medium">
                     {link.label}
                     <ChevronDown className={`w-4 h-4 transition-transform ${dropdown === link.label ? 'rotate-180' : ''}`} />
                   </button>
@@ -82,7 +86,7 @@ export default function Navbar() {
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-blue-500/10 transition-colors"
+                            className="block px-4 py-3 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-blue-500/10 transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -97,8 +101,8 @@ export default function Navbar() {
                   to={link.path!}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                     location.pathname === link.path
-                      ? 'text-blue-400 bg-blue-500/10'
-                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                      ? 'text-blue-600 dark:text-blue-400 bg-blue-500/10'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'
                   }`}
                 >
                   {link.label}
@@ -109,18 +113,36 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
+            <motion.button
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-9 h-9 rounded-xl glass flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </motion.button>
             <Link to="/request" className="btn-primary text-sm py-2.5">
               Start a Project
             </Link>
           </div>
 
           {/* Mobile toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -132,18 +154,18 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden glass-dark border-t border-white/5"
+            className="lg:hidden glass-dark border-t border-black/5 dark:border-white/5"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) =>
                 link.children ? (
                   <div key={link.label}>
-                    <p className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">{link.label}</p>
+                    <p className="px-3 py-2 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">{link.label}</p>
                     {link.children.map((child) => (
                       <Link
                         key={child.path}
                         to={child.path}
-                        className="block px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors pl-6"
+                        className="block px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors pl-6"
                       >
                         {child.label}
                       </Link>
@@ -155,8 +177,8 @@ export default function Navbar() {
                     to={link.path!}
                     className={`block px-3 py-2.5 rounded-lg transition-colors ${
                       location.pathname === link.path
-                        ? 'text-blue-400 bg-blue-500/10'
-                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                        ? 'text-blue-600 dark:text-blue-400 bg-blue-500/10'
+                        : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'
                     }`}
                   >
                     {link.label}

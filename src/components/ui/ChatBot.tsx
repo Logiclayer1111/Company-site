@@ -93,7 +93,7 @@ export default function ChatBot() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-            className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 glass-dark rounded-2xl overflow-hidden shadow-2xl shadow-black/40"
+            className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 glass-dark rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-gray-200/50 dark:border-transparent"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-violet-600 px-4 py-3 flex items-center gap-3">
@@ -123,7 +123,7 @@ export default function ChatBot() {
                   </div>
                   <div className={`max-w-[75%] px-3 py-2 rounded-xl text-sm leading-relaxed ${
                     msg.role === 'bot'
-                      ? 'bg-white/5 text-gray-200'
+                      ? 'bg-gray-100 dark:bg-white/5 text-gray-800 dark:text-gray-200'
                       : 'bg-blue-600 text-white'
                   }`}>
                     {msg.text}
@@ -135,7 +135,7 @@ export default function ChatBot() {
                   <div className="w-7 h-7 rounded-lg bg-blue-500/20 flex items-center justify-center">
                     <Bot className="w-4 h-4 text-blue-400" />
                   </div>
-                  <div className="bg-white/5 px-3 py-2 rounded-xl flex gap-1 items-center">
+                  <div className="bg-gray-100 dark:bg-white/5 px-3 py-2 rounded-xl flex gap-1 items-center">
                     {[0, 1, 2].map((i) => (
                       <span key={i} className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
                     ))}
@@ -159,13 +159,13 @@ export default function ChatBot() {
             </div>
 
             {/* Input */}
-            <div className="p-3 border-t border-white/5 flex gap-2">
+            <div className="p-3 border-t border-gray-200 dark:border-white/5 flex gap-2">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && sendMessage(input)}
                 placeholder="Ask me anything..."
-                className="flex-1 text-sm py-2 px-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50"
+                className="flex-1 text-sm py-2 px-3 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500/50"
               />
               <button
                 onClick={() => sendMessage(input)}

@@ -150,14 +150,14 @@ export default function HomePage() {
                 <span className="typing-cursor" />
               </span>
               <br />
-              <span className="text-gray-300">That Scale</span>
+              <span className="text-gray-700 dark:text-gray-300">That Scale</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
+              className="text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
             >
               NexaCore is a full-service technology partner for startups and enterprises.
               From concept to production — we deliver software that drives real business outcomes.
@@ -191,7 +191,7 @@ export default function HomePage() {
                 <div className="text-4xl font-black gradient-text mb-1">
                   {statsInView && <AnimatedCounter end={stat.value} suffix={stat.suffix} />}
                 </div>
-                <p className="text-sm text-gray-400">{stat.label}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -199,15 +199,15 @@ export default function HomePage() {
       </section>
 
       {/* ── CLIENT LOGOS ── */}
-      <section className="py-12 border-y border-white/5 bg-dark-800/50 overflow-hidden">
-        <p className="text-center text-sm text-gray-500 mb-8 uppercase tracking-widest">Trusted by innovative companies</p>
+      <section className="py-12 border-y border-gray-200 dark:border-white/5 bg-gray-50/80 dark:bg-dark-800/50 overflow-hidden">
+        <p className="text-center text-sm text-gray-400 dark:text-gray-500 mb-8 uppercase tracking-widest">Trusted by innovative companies</p>
         <div className="flex gap-8 animate-[scroll_20s_linear_infinite]" style={{ width: 'max-content' }}>
           {[...clientLogos, ...clientLogos].map((client, i) => (
             <div key={i} className="flex items-center gap-3 px-6 py-3 glass rounded-xl flex-shrink-0">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-xs font-bold text-white">
                 {client.logo}
               </div>
-              <span className="text-gray-400 font-medium whitespace-nowrap">{client.name}</span>
+              <span className="text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap">{client.name}</span>
             </div>
           ))}
         </div>
@@ -250,8 +250,8 @@ export default function HomePage() {
                     service.color === 'violet' ? 'text-violet-400' : 'text-cyan-400'
                   }`} />
                 </div>
-                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">{service.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{service.short}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{service.title}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{service.short}</p>
               </motion.div>
             )
           })}
@@ -264,7 +264,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FEATURED PROJECTS ── */}
-      <section className="py-24 bg-dark-800/30">
+      <section className="py-24 bg-gray-50/50 dark:bg-dark-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Our Work"
@@ -292,11 +292,11 @@ export default function HomePage() {
                   <span className="absolute top-3 left-3 tag text-xs">{project.category}</span>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                  <p className="text-sm text-gray-400 mb-4 line-clamp-2">{project.description}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">{project.description}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-gray-400">{tag}</span>
+                      <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400">{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -326,10 +326,10 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -30 }}
             transition={{ duration: 0.4 }}
-            className="glass rounded-2xl p-8 text-center"
+            className="glass rounded-2xl p-8 text-center border border-gray-200/50 dark:border-white/5"
           >
             <Quote className="w-10 h-10 text-blue-500/40 mx-auto mb-6" />
-            <p className="text-lg text-gray-200 leading-relaxed mb-8 italic">
+            <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-8 italic">
               "{testimonials[testimonialIndex].text}"
             </p>
             <div className="flex items-center justify-center gap-4">
@@ -339,8 +339,8 @@ export default function HomePage() {
                 className="w-12 h-12 rounded-full object-cover border-2 border-blue-500/30"
               />
               <div className="text-left">
-                <p className="font-semibold text-white">{testimonials[testimonialIndex].name}</p>
-                <p className="text-sm text-gray-400">{testimonials[testimonialIndex].role}</p>
+                <p className="font-semibold text-gray-900 dark:text-white">{testimonials[testimonialIndex].name}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{testimonials[testimonialIndex].role}</p>
               </div>
               <div className="flex gap-0.5 ml-4">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -360,7 +360,7 @@ export default function HomePage() {
               <button
                 key={i}
                 onClick={() => setTestimonialIndex(i)}
-                className={`w-2 h-2 rounded-full transition-all ${i === testimonialIndex ? 'bg-blue-500 w-6' : 'bg-gray-600'}`}
+                className={`w-2 h-2 rounded-full transition-all ${i === testimonialIndex ? 'bg-blue-500 w-6' : 'bg-gray-300 dark:bg-gray-600'}`}
               />
             ))}
             <button
