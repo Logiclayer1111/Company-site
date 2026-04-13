@@ -1,3 +1,4 @@
+
 export const services = [
   {
     id: 'web-dev',
@@ -138,7 +139,7 @@ export const projects = [
 
 export const teamMembers = [
   {
-    name: 'Alex Chen',
+    name: 'James Markov',
     role: 'CEO & Co-Founder',
     bio: '15+ years in enterprise software. Former engineering lead at Google and Stripe.',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
@@ -146,7 +147,7 @@ export const teamMembers = [
     twitter: '#',
   },
   {
-    name: 'Sarah Mitchell',
+    name: 'Viktor Marjewskie',
     role: 'CTO & Co-Founder',
     bio: 'AI/ML expert with a PhD from MIT. Built systems processing billions of events daily.',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
