@@ -35,7 +35,7 @@ export default function AboutPage() {
               We're a Team of <span className="gradient-text">Builders</span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed mb-8">
-              Founded in 2018, NexaCore has grown from a 3-person startup to a 200+ strong team of engineers, designers, and strategists. We've delivered 200+ projects across 20+ industries — and we're just getting started.
+              Founded in 2018 by James Markov, NexaCore has grown from a 3-person startup to a 50+ strong team of engineers, designers, and strategists. We've delivered 200+ projects across 20+ industries — and we're just getting started.
             </p>
             <Link to="/request" className="btn-primary">
               Work With Us <ArrowRight className="w-5 h-5" />
