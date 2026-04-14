@@ -373,6 +373,81 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── TECH STACK ── */}
+      <section className="py-24 bg-gray-50/50 dark:bg-dark-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            badge="Tech Stack"
+            title="Technologies "
+            highlight="We Master"
+            subtitle="We leverage the best-in-class tools and frameworks to build performant, scalable, and future-proof digital products."
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                category: 'Frontend',
+                color: 'blue',
+                items: ['React', 'Next.js', 'Vue.js', 'Angular', 'TypeScript', 'HTML', 'CSS', 'Tailwind'],
+              },
+              {
+                category: 'Backend',
+                color: 'violet',
+                items: ['Node.js', 'Python', 'Laravel', 'Django', 'PHP', 'GraphQL', 'Express.js'],
+              },
+              {
+                category: 'Mobile',
+                color: 'cyan',
+                items: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
+              },
+              {
+                category: 'Cloud',
+                color: 'blue',
+                items: ['AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes'],
+              },
+              {
+                category: 'AI / ML',
+                color: 'violet',
+                items: ['TensorFlow', 'PyTorch', 'OpenAI'],
+              },
+              {
+                category: 'Databases',
+                color: 'cyan',
+                items: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL'],
+              },
+            ].map((group, i) => (
+              <motion.div
+                key={group.category}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="glass rounded-2xl p-6 border border-white/5 hover:border-blue-500/20 transition-all duration-300"
+              >
+                <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4 ${
+                  group.color === 'blue'
+                    ? 'bg-blue-500/10 text-blue-400'
+                    : group.color === 'violet'
+                    ? 'bg-violet-500/10 text-violet-400'
+                    : 'bg-cyan-500/10 text-cyan-400'
+                }`}>
+                  {group.category}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-sm px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 font-medium hover:bg-blue-500/10 hover:text-blue-500 dark:hover:text-blue-400 transition-colors cursor-default"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA BANNER ── */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <motion.div
