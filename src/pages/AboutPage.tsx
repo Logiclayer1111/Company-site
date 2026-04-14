@@ -29,13 +29,13 @@ export default function AboutPage() {
           >
             <span className="tag mb-4 inline-flex">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-1.5" />
-              About LogicPulse
+              About Draxilon
             </span>
             <h1 className="text-5xl lg:text-6xl font-black mb-6">
               We're a Team of <span className="gradient-text">Builders</span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed mb-8">
-              Founded in 2018 by James Markov, LogicPulse has grown from a 3-person startup to a 50+ strong team of engineers, designers, and strategists. We've delivered 200+ projects across 20+ industries — and we're just getting started.
+              Founded in 2018 by James Markov, Draxilon has grown from a 3-person startup to a 50+ strong team of engineers, designers, and strategists. We've delivered 200+ projects across 20+ industries — and we're just getting started.
             </p>
             <Link to="/request" className="btn-primary">
               Work With Us <ArrowRight className="w-5 h-5" />
@@ -72,7 +72,7 @@ export default function AboutPage() {
           <SectionHeader
             badge="The Team"
             title="Meet the "
-            highlight="Minds Behind LogicPulse"
+            highlight="Minds Behind Draxilon"
             subtitle="A diverse team of engineers, designers, and strategists united by a passion for building great software."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

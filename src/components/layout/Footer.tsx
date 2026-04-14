@@ -36,7 +36,7 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">LogicPulse</span>
+              <span className="text-xl font-bold gradient-text">Draxilon</span>
             </Link>
             <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
               Building future-ready digital products for startups and enterprises. From idea to scale — we make it happen.
@@ -98,8 +98,8 @@ export default function Footer() {
         {/* Contact info */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap gap-6 text-sm text-gray-500 dark:text-gray-400">
-            <a href="mailto:hello@LogicPulse.io" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              <Mail className="w-4 h-4" /> hello@LogicPulse.io
+            <a href="mailto:hello@Draxilon.io" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Mail className="w-4 h-4" /> hello@Draxilon.io
             </a>
             <a href="tel:+12125550100" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               <Phone className="w-4 h-4" /> +1 (212) 555-0100
@@ -109,7 +109,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-sm text-gray-400 dark:text-gray-500">
-            © {new Date().getFullYear()} LogicPulse. All rights reserved.
+            © {new Date().getFullYear()} Draxilon. All rights reserved.
           </p>
         </div>
       </div>

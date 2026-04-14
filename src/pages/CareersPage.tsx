@@ -48,7 +48,7 @@ export default function CareersPage() {
       {/* Culture */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeader
-          badge="Life at LogicPulse"
+          badge="Life at Draxilon"
           title="Why People "
           highlight="Love Working Here"
           subtitle="We've built a culture where great people do their best work."
@@ -188,7 +188,7 @@ export default function CareersPage() {
                   <input {...register('portfolio')} placeholder="https://..." />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-300 mb-1">Why LogicPulse?</label>
+                  <label className="block text-sm text-gray-300 mb-1">Why Draxilon?</label>
                   <textarea {...register('message')} rows={3} placeholder="Tell us why you'd be a great fit..." />
                 </div>
                 <div className="border-2 border-dashed border-white/10 rounded-xl p-4 text-center cursor-pointer hover:border-blue-500/30 transition-colors">

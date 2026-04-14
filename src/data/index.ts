@@ -200,14 +200,14 @@ export const testimonials = [
     name: 'Viktor Marjewskie',
     role: 'CTO, FinFlow Inc.',
     avatar: '/assests/images/Viktor Majewski.png',
-    text: 'LogicPulse transformed our vision into a world-class banking app. Their AI expertise and attention to detail is unmatched. We went from concept to 500K users in 8 months.',
+    text: 'Draxilon transformed our vision into a world-class banking app. Their AI expertise and attention to detail is unmatched. We went from concept to 500K users in 8 months.',
     rating: 5,
   },
   {
     name: 'Antoni Nowicki',
     role: 'Head of Engineering',
     avatar: '/assests/images/Antoni Nowicki.png',
-    text: 'LogicPulse\'s ML solution saved us $2M in the first year. The ROI was clear within 3 months. I\'d recommend them to any enterprise looking to leverage AI.',
+    text: 'Draxilon\'s ML solution saved us $2M in the first year. The ROI was clear within 3 months. I\'d recommend them to any enterprise looking to leverage AI.',
     rating: 5,
   },
 ]
@@ -367,7 +367,7 @@ export const openPositions = [
 ]
 
 export const companyTimeline = [
-  { year: '2018', title: 'Founded', description: 'LogicPulse was founded by James Markov and Antoni Nowicki with a vision to democratize enterprise-grade technology.' },
+  { year: '2018', title: 'Founded', description: 'Draxilon was founded by James Markov and Antoni Nowicki with a vision to democratize enterprise-grade technology.' },
   { year: '2019', title: 'First Enterprise Client', description: 'Landed our first Fortune 500 client and grew the team to 15 engineers.' },
   { year: '2020', title: 'AI Division Launch', description: 'Launched our dedicated AI/ML practice, delivering our first production ML systems.' },
   { year: '2021', title: 'Series A — $8M', description: 'Raised $8M to expand globally. Opened offices in London and Singapore.' },

@@ -28,7 +28,7 @@ export default function BlogPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <span className="tag mb-4 inline-flex">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-1.5" />
-              The LogicPulse Blog
+              The Draxilon Blog
             </span>
             <h1 className="text-5xl lg:text-6xl font-black mb-6">
               Insights from the <span className="gradient-text">Engineering Trenches</span>

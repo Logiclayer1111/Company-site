@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import { Mail, Phone, MapPin, Clock, CheckCircle2, ArrowRight, Send } from 'lucide-react'
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'hello@LogicPulse.io', href: 'mailto:hello@LogicPulse.io' },
+  { icon: Mail, label: 'Email', value: 'hello@Draxilon.io', href: 'mailto:hello@Draxilon.io' },
   { icon: Phone, label: 'Phone', value: '+1 (212) 555-0100', href: 'tel:+12125550100' },
   { icon: MapPin, label: 'Offices', value: 'Warsaw · London · Singapore', href: '#' },
   { icon: Clock, label: 'Response Time', value: 'Within 24 hours', href: '#' },
@@ -71,7 +71,7 @@ export default function ContactPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-dark-900 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-400">LogicPulse - Warsaw, Poland</p>
+                  <p className="text-sm text-gray-400">Draxilon - Warsaw, Poland</p>
                   <p className="text-xs text-black font-mono">52.2297° N, 21.0122° E</p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="LogicPulse Warsaw Office Location"
+                title="Draxilon Warsaw Office Location"
               />
               {/* Grid overlay */}
               <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none z-10" />
