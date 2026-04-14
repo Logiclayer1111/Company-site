@@ -33,7 +33,7 @@ export default function ServicesPage() {
               Everything You Need to <span className="gradient-text">Build & Scale</span>
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From a single feature to a full product suite — we have the expertise to deliver at every layer of your technology stack.
+              We provide top-notch services in the digital world. Regardless of the size of your company, we don’t discriminate. <br/> Our top priority is to provide you with custom solutions and give you the best return on your investment. Creating a digital image is very time-consuming and can be a hassle in the digitally transforming world, but we keep an eye on ongoing trends, social media development, and your target audience to make things easy for you and your company’s growth and profitability. At times, our team of experts deals with multiple companies, so we guide you on industry best practices and how your company can grow at a fast pace. Our packages include all of your digital services, from ranking your website to securing your data through blockchain services. We know how to create a display that suits your website and how to make a social media appearance.
             </p>
           </motion.div>
         </div>
