@@ -30,7 +30,7 @@ const center = {
 export default function ContactPage() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string,
+    googleMapsApiKey: 'AIzaSyD91HA1tBQ4Y_bM5Ws1YLEGRnFVoDLtWWM',
     libraries: ['places'] as GoogleMapsLibraries
   })
   const [submitted, setSubmitted] = useState(false)
