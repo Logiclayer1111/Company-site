@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { Mail, Phone, MapPin, Clock, CheckCircle2, ArrowRight, Send } from 'lucide-react'
 
+import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api'
+import type { Libraries } from '@react-google-maps/api'
+
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'hello@Draxilon.io', href: 'mailto:hello@Draxilon.io' },
   { icon: Phone, label: 'Phone', value: '+1 (212) 555-0100', href: 'tel:+12125550100' },
@@ -10,7 +13,26 @@ const contactInfo = [
   { icon: Clock, label: 'Response Time', value: 'Within 24 hours', href: '#' },
 ]
 
+interface GoogleMapsLibraries extends Libraries {
+  places: true
+}
+
+const containerStyle = {
+  width: '100%',
+  height: '100%'
+}
+
+const center = {
+  lat: 52.22877,
+  lng: 21.00778
+}
+
 export default function ContactPage() {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string,
+    libraries: ['places'] as GoogleMapsLibraries
+  })
   const [submitted, setSubmitted] = useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -66,27 +88,37 @@ export default function ContactPage() {
               </a>
             ))}
 
-            {/* Map placeholder */}
             <div className="glass rounded-2xl overflow-hidden border border-white/5 h-48 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-dark-900 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-400">Draxilon - Warsaw, Poland</p>
-                  <p className="text-xs text-black font-mono">52.2297° N, 21.0122° E</p>
+              {!isLoaded ? (
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-dark-900 flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2 animate-pulse" />
+                    <p className="text-sm text-gray-400">Loading map...</p>
+                  </div>
                 </div>
-              </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.099947!2d21.00778!3d52.22877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c0c1e!2zTmV4YUNvcmUgU3RhcmkgU2NlbmEgLSBXYXJzYXcsIFBvbGFuZA!5e0!3m2!1sen!2sus!4v172!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{border:0}}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Draxilon Warsaw Office Location"
-              />
-              {/* Grid overlay */}
-              <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none z-10" />
+              ) : (
+                <GoogleMap
+                  mapContainerStyle={containerStyle}
+                  center={center}
+                  zoom={15}
+                  options={{
+                    styles: [
+                      {
+                        featureType: 'poi',
+                        elementType: 'labels',
+                        stylers: [{ visibility: 'off' }]
+                      }
+                    ],
+                    zoomControl: true,
+                    streetViewControl: true,
+                    mapTypeControl: true,
+                    fullscreenControl: true
+                  }}
+                >
+                  <Marker position={center} />
+                </GoogleMap>
+              )}
+              <div className="absolute inset-0 bg-grid opacity-5 pointer-events-none z-10" />
             </div>
           </motion.div>
 
