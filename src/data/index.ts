@@ -179,7 +179,7 @@ export const teamMembers = [
     twitter: '#',
   },
   {
-    name: 'Iroi Nowak',
+    name: 'Iori Nowak',
     role: 'Senior Backend Engineer',
     bio: 'Node.js and cloud specialist. Built high-throughput APIs serving millions of requests daily.',
     avatar: '/assests/images/Iroi Nowak.png',
