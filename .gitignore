@@ -1,9 +1,9 @@
-node_modules
-dist
-dist-ssr
-*.local
+node_modules/
+dist/
+.vite/
 .env
-.env.local
-.env.production
+data/
+server/data/
+*.log
 .DS_Store
-Thumbs.db
+
